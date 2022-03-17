@@ -63,7 +63,9 @@ imguiWrapper::Setup(const IMUISetup& setup_) {
     io.KeyMap[ImGuiKey_Y] = Key::Y;
     io.KeyMap[ImGuiKey_Z] = Key::Z;
 
-    io.RenderDrawListsFn = imguiRenderDrawLists;
+    // FIXME: io.RenderDrawListsFn was deprecated,
+    // see https://abi-laboratory.pro/?view=changelog&l=imgui&v=1.60
+    //io.RenderDrawListsFn = imguiRenderDrawLists;
 
     #if ORYOL_RASPBERRYPI
     io.MouseDrawCursor = true;
